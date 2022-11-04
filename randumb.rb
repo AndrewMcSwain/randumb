@@ -5,14 +5,21 @@
 result = [[],[]]
 iter_size = 10
 order_mag = 12
+rand_val
 
-iter_size.times { 
-  result.push((1..10).yield_self { |r| r.member?(rand(15)) }) } 
+gen = iter_size.times { 
+
+  result[0].push(1..10).yield_self {rand_val = rand(15)}
+}
+    
+#is_member_bool = result[0].each {
+#  |i| result[1].push(i.member?(rand_val))
+#}
 
 t = []
 f = []
 
-result.each do |i|
+result[1].each do |i|
   if i == true 
     t.push(i)
   else
