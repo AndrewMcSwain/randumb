@@ -2,20 +2,27 @@
 #  example: [[10,100] => [...]
 #iter_attr = (start, end, order_mag)
 
-result = [[],[]]
-iter_size = 10
-order_mag = 12
-rand_val
+class StatCheck
 
-gen = iter_size.times { 
+  @result = [[],[]]
+  iter_length = 10
+  order_mag = 12
 
-  result[0].push(1..10).yield_self {rand_val = rand(15)}
-}
+def gen(iter_lengt_arg)  
+  iter_length_arg.times { 
+    result[0]
+      .push(1..10)
+      .yield_self {rand(15)}
+  }
+end
     
-#is_member_bool = result[0].each {
-#  |i| result[1].push(i.member?(rand_val))
-#}
+def is_member_bool
+  result[0].each do |i| 
+    result[1].push(i.member?())
+  end
+end
 
+  
 t = []
 f = []
 
@@ -37,3 +44,6 @@ puts proportion
 
 puts "pct is "
 puts pct
+
+puts "rand values"
+puts result[0]
