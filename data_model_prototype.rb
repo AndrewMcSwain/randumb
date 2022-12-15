@@ -6,22 +6,25 @@
 # 
 list_of_fn = [ x, y, z]
 # actual: 
-# result[:Fn"#index_to_s{list_of_fn}"]
-#          [:v"#index_to_s{result[Fn..]
-#                         [index_of_v]"
-#                         }
-#
-    result = { Fn1 => [ v1 => mdarr,
+  result[:fn"#{index_to_s(list_of_fn)}"]
+          [:v"#{index_to_s(result[fn..]
+                                 [index_of_v]
+                          )
+               }"
+        ]
+
+
+    result = { fn1 => [ v1 => mdarr,
                         v2 => mdarr,
                         v3 => mdarr,
                         ...
                ],
-               Fn2 => [ v1 => mdarr,
+               fn2 => [ v1 => mdarr,
                         v2 => mdarr,
                         v3 => mdarr,
                         ...
                ],
-               Fn3 => [ v1 => mdarr,
+               fn3 => [ v1 => mdarr,
                         v2 => mdarr,
                         v3 => mdarr.
                         ...
